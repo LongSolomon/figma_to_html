@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: #fffcf4;
+  font-family: "Poppins", sans-serif;
+}
+/*============common=============*/
+a {
+  text-decoration: none;
+}
+
+.main-content {
+  width: 1170px;
+  margin: auto;
+  max-width: calc(100% - 48px);
+}
+.btn {
+  display: inline-block;
+  line-height: 50px;
+  min-width: 118px; // because most of buttons have this size
+  padding: 0px 16px;
+  color: #fff;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: 24.5px;
+  background: #171100;
+}
+/*============unique=============*/
+.btn-sign-up {
+  min-width: 144px;
+}
+/*============header=============*/
+.header {
+  // margin-top: 10px;
+  background-color: #e87ac6;
+  .main-content {
+    .body {
+      display: flex;
+      align-items: center;
+      // justify-content:space-around;
+      /* margin or padding whatever */
+      padding: {
+        top: 36px;
+        bottom: 8px;
+      }
+      .nav {
+        margin-left: auto;
+        ul {
+          display: flex;
+          li {
+            a {
+              position: relative;
+              // display: inline-block;
+              color: #5f5b53;
+              font-size: 1.6rem;
+              padding: 0.8rem 2.1rem;
+              // margin-bottom: 10px;
+              // background-color: aquamarine;
+            }
+            a:hover,
+            &.active > a {
+              color: #171100;
+              text-shadow: 1px 0px 0px currentColor;
+            }
+            &.active {
+              // a {
+              //   color: #e7aa03;
+              //   text-shadow: 1px 0px 0px currentColor;
+              // }
+              a::after {
+                content: "";
+                position: absolute;
+                left: 21px;
+                // bottom:0px;
+                display: block;
+                background: #171100;
+                width: 12px;
+                height: 2px;
+                border-radius: 1px;
+                // flex-shrink: 0;
+              }
+            }
+          }
+        }
+      }
+      .action {
+        margin-left: 49px;
+      }
+    }
+  }
+  &.fixed{
+    position: sticky;
+    top:-28px;
+  }
+}

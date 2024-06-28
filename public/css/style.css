@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: #fffcf4;
+  font-family: "Poppins", sans-serif;
+}
+
+/*============common=============*/
+a {
+  text-decoration: none;
+}
+
+.main-content {
+  width: 1170px;
+  margin: auto;
+  max-width: calc(100% - 48px);
+}
+
+.btn {
+  display: inline-block;
+  line-height: 50px;
+  min-width: 118px;
+  padding: 0px 16px;
+  color: #fff;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: 24.5px;
+  background: #171100;
+}
+
+/*============unique=============*/
+.btn-sign-up {
+  min-width: 144px;
+}
+
+/*============header=============*/
+.header {
+  background-color: #e87ac6;
+}
+.header .main-content .body {
+  display: flex;
+  align-items: center;
+  /* margin or padding whatever */
+  padding-top: 36px;
+  padding-bottom: 8px;
+}
+.header .main-content .body .nav {
+  margin-left: auto;
+}
+.header .main-content .body .nav ul {
+  display: flex;
+}
+.header .main-content .body .nav ul li a {
+  position: relative;
+  color: #5f5b53;
+  font-size: 1.6rem;
+  padding: 0.8rem 2.1rem;
+}
+.header .main-content .body .nav ul li a:hover, .header .main-content .body .nav ul li.active > a {
+  color: #171100;
+  text-shadow: 1px 0px 0px currentColor;
+}
+.header .main-content .body .nav ul li.active a::after {
+  content: "";
+  position: absolute;
+  left: 21px;
+  display: block;
+  background: #171100;
+  width: 12px;
+  height: 2px;
+  border-radius: 1px;
+}
+.header .main-content .body .action {
+  margin-left: 49px;
+}
+.header.fixed {
+  position: sticky;
+  top: -28px;
+}
+
+/*# sourceMappingURL=style.css.map */
