@@ -1,3 +1,4 @@
+$test-color: #d8421438;
 * {
   box-sizing: border-box;
 }
@@ -8,7 +9,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  background-color: #fffcf4;
+  // background-color: #fffcf4;
   font-family: "Poppins", sans-serif;
 }
 /*============common=============*/
@@ -20,6 +21,7 @@ a {
   width: 1170px;
   margin: auto;
   max-width: calc(100% - 48px);
+  background-color: $test-color;
 }
 .btn {
   display: inline-block;
@@ -96,8 +98,48 @@ a {
       }
     }
   }
-  &.fixed{
+  &.fixed {
     position: sticky;
-    top:-28px;
+    top: -28px;
+  }
+}
+
+/*============main=============*/
+.main {
+  // margin-top: 20px;
+  .hero {
+    padding: {
+      top: 55px;
+    }
+    .main-content {
+      .body {
+        display: flex;
+        .left-hero {
+          position: relative;
+          background-color: yellow;
+          width: 48%;
+          // height:500px;
+          // height: 685px;
+          // img{
+          //   width: 470px;
+          //   height:685px;
+          // }
+          .sumary {
+            position:absolute;
+            bottom:48px;
+            right:0px;
+            width: 270px;
+            height: 244px;
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+          }
+        }
+        .right-hero {
+          // margin-left: auto;
+          width: 52%;
+        }
+      }
+    }
   }
 }
