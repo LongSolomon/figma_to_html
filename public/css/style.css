@@ -159,7 +159,7 @@ a {
 }
 .main .hero .main-content .body .right-hero .heading {
   color: #171100;
-  font-family: Sen;
+  font-family: "Sen", sans-serif;
   font-size: 58px;
   font-style: normal;
   font-weight: 700;
