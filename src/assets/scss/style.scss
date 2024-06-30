@@ -1,4 +1,6 @@
 $test-color: #d8421438;
+$active-btn-color: #ffb900;
+$passive-btn-color: #171100;
 $heading-font: "Sen", sans-serif;
 * {
   box-sizing: border-box;
@@ -17,7 +19,9 @@ body {
 a {
   text-decoration: none;
 }
-
+// .active-btn{
+//   color: $active-btn-color
+// }
 .main-content {
   width: 1170px;
   margin: auto;
@@ -34,7 +38,19 @@ a {
   font-size: 1.6rem;
   font-weight: 600;
   border-radius: 24.5px;
-  background: #171100;
+  background: $passive-btn-color;
+  &:hover {
+    background: $active-btn-color;
+  }
+}
+.line-clamp{
+  display:-webkit-box;
+  -webkit-line-clamp: var(--line-number,1);
+  -webkit-box-orient: vertical;
+  overflow:hidden;
+}
+.line-clamp.line-2{
+  --line-number:2;
 }
 /*============unique=============*/
 .btn-sign-up {
@@ -72,7 +88,7 @@ a {
             }
             a:hover,
             &.active > a {
-              color: #171100;
+              color: $passive-btn-color;
               text-shadow: 1px 0px 0px currentColor;
             }
             &.active {
@@ -86,7 +102,7 @@ a {
                 left: 21px;
                 // bottom:0px;
                 display: block;
-                background: #171100;
+                background: $passive-btn-color;
                 width: 12px;
                 height: 2px;
                 border-radius: 1px;
@@ -180,7 +196,7 @@ a {
                   line-height: 1.86; //186%
                 }
                 .title {
-                  color: #171100;
+                  color: $passive-btn-color;
                   font-size: 18px;
                   font-weight: 600;
                   line-height: 166.667%;
@@ -197,7 +213,7 @@ a {
             left: 130px;
           }
           .heading {
-            color: #171100;
+            color: $passive-btn-color;
             font-family: $heading-font;
             font-size: 58px;
             font-style: normal;
@@ -221,7 +237,6 @@ a {
               width: 180px;
               line-height: 64px;
               border-radius: 32px;
-              background: #ffb900;
               font-size: 1.8rem;
             }
             .watch {
@@ -243,7 +258,7 @@ a {
               .watch-video {
                 margin-left: 14px;
                 // width: 148px;
-                color: #171100;
+                color: $passive-btn-color;
                 font-size: 1.8rem;
                 font-weight: 600;
                 line-height: 30px; /* 166.667% */
@@ -258,7 +273,7 @@ a {
               display: flex;
               p {
                 strong {
-                  color: #171100;
+                  color: $passive-btn-color;
                   font-family: Sen;
                   font-size: 44px;
                   font-weight: 700;
@@ -269,6 +284,127 @@ a {
                   margin-left: 28px;
                 }
               }
+            }
+          }
+        }
+      }
+    }
+  }
+  .popular {
+    padding: 65px 0px;
+    margin-top: 135px;
+    .popular-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .popular-info {
+        .heading {
+          color: $passive-btn-color;
+          font-family: Sen;
+          font-size: 38px;
+          font-weight: 700;
+          line-height: 48px; /* 126.316% */
+          letter-spacing: -0.76px;
+        }
+        .desc {
+          color: #5f5b53;
+          font-family: Poppins;
+          font-size: 18px;
+          line-height: 30px; /* 166.667% */
+          margin-top: 16px;
+        }
+      }
+      .popular-control {
+        .btn-control {
+          border-radius: 50%;
+          border: 1px solid $active-btn-color;
+          border-color: $active-btn-color;
+          // border-style:outset;
+          // border-style: inset;
+          color: $active-btn-color;
+          background: transparent;
+          width: 40px;
+          height: 40px;
+          &:hover {
+            background-color: $active-btn-color;
+            color: white;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .course-list {
+      margin-top: 55px;
+      display: flex;
+      // justify-content: space-between;
+      gap: 30px;
+      .course-item {
+        // width: 370px;
+        // height: 466px;
+        flex: 1;
+        border-radius: 12px;
+        border: 1px solid #e2dfda;
+        background: #fff;
+        &:hover {
+          border-radius: 12px;
+          border: 0px transparent;
+          background: #fff;
+          box-shadow: 0px 18px 36px 0px rgba(0, 0, 0, 0.1);
+        }
+        img.thumbnail {
+          width: 100%;
+          height: 278px;
+          border-radius: 12px 12px 0px 0px;
+          object-fit: cover;
+        }
+        .wrapper {
+          padding: 16px 22px 22px 22px;
+          .heading {
+            display: flex;
+            justify-content: space-between;
+
+            align-items: center;
+            .title {
+              color: #171100;
+              font-size: 18px;
+              font-weight: 600;
+              line-height: 30px; /* 166.667% */
+            }
+            .rating {
+              display: flex;
+              align-items: center;
+              color: #fea31b;
+              svg {
+                margin-right: 6px;
+              }
+              span {
+                // display: inline-block;
+                // margin-left: 55px;
+              }
+            }
+          }
+          .desc {
+            color: #5f5b53;
+            margin-top: 6px;
+            font-size: 14px;
+            line-height: 26px; /* 185.714% */
+          }
+          .foot {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 12px;
+            .btn-buy {
+              width: 118px;
+            }
+            .price {
+              color: #171100;
+
+              font-family: Poppins;
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 30px; /* 166.667% */
             }
           }
         }
