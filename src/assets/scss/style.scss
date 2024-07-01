@@ -43,14 +43,14 @@ a {
     background: $active-btn-color;
   }
 }
-.line-clamp{
-  display:-webkit-box;
-  -webkit-line-clamp: var(--line-number,1);
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-number, 1);
   -webkit-box-orient: vertical;
-  overflow:hidden;
+  overflow: hidden;
 }
-.line-clamp.line-2{
-  --line-number:2;
+.line-clamp.line-2 {
+  --line-number: 2;
 }
 /*============unique=============*/
 .btn-sign-up {
@@ -406,6 +406,67 @@ a {
               font-weight: 600;
               line-height: 30px; /* 166.667% */
             }
+          }
+        }
+      }
+    }
+  }
+  .feedback {
+    // overflow: scroll;
+    margin-top: 165px;
+    background-color: #2e2100;
+    .feedback-list {
+      overflow: hidden;
+      display: flex;
+      padding: 96px 0px;
+      .feedback-item {
+        width: 100%;
+        display: flex;
+        flex-shrink: 0;
+        justify-content: space-between;
+        .info {
+          .avatar {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+          .name {
+            color: #f7f7f7;
+            font-size: 24px;
+            font-weight: 700px;
+            line-height: 34px;
+          }
+          .profession {
+            margin-top: 4px;
+            color: #bfbcb2;
+            font-size: 14px;
+            line-height: 26px; /* 185.714% */
+          }
+          .dots {
+            margin-top: 28px;
+            display: flex;
+            gap: 6px;
+            .dot {
+              // display:block;
+              width: 6px;
+              height: 6px;
+              border-radius: 6px;
+              background: #634700;
+              &.active {
+                background-color: $active-btn-color;
+              }
+            }
+          }
+        }
+        .content {
+          width: 66%;
+          .inside-quote {
+            color: #fff;
+            font-size: 26px;
+            font-style: italic;
+            font-weight: 400;
+            line-height: 40px; /* 153.846% */
           }
         }
       }
